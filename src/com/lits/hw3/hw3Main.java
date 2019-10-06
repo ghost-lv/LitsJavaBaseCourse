@@ -8,69 +8,69 @@ public class hw3Main {
         // якшо символ ‘-’ ви ініціалізуєете змінні одними парамеитрами,
         // якшо ‘+’ то ще іншими і якшо ‘*’ іншими
         Random r = new Random();
-        var rnd = r.nextInt(3);
-        var Symbol = "";
-        var Result = 0;
-        var ResultString ="";
+        var rnd = r.nextInt(2);
+        var symbol = (char)(0);
+        var result = 0;
+        var resultString ="";
         if (rnd==0) {
-            Symbol = "-";
+            symbol = '-';
         }
         else if (rnd==1) {
-            Symbol="+";
+            symbol='+';
         }
         else if (rnd==2){
-            Symbol="*";
+            symbol='*';
         }
         var a =0;
         var b =0;
-        if (Symbol == "-") {
+        if (symbol == '-') {
             a=5;
             b=6;
         }
-        else if (Symbol=="+"){
+        else if (symbol=='+'){
             a=15;
             b=22;
         }
-        else if (Symbol=="*") {
+        else if (symbol=='*') {
             a = 30;
             b = 20;
         }
-        Result= a + 11/12 * (b + b ) / 12;
-        ResultString="1. Symbol=\"" + Symbol + "\"; Formula: a+11/12(b+b)/12=" + Result;
-        System.out.println(ResultString);
-        Result=0;
+        result= a + 11/12 * (b + b ) / 12;
+        resultString="1. Symbol=\"" + symbol + "\"; Formula: a+11/12(b+b)/12=" + result;
+        System.out.println(resultString);
+        result=0;
         //Вивести всі прості числа він 1 до 100
         //Вивести суму всіх чисел від 0 до 100
         //Вивести суму останніх трьох чисел від 100 до 200
-        ResultString="2. Simple numbers 1-100: ";
-        var Result2 = 0;
+        resultString="2. Simple numbers 1-100: ";
+        var result2 = 0;
         rnd=r.nextInt(10);
-        var ResultString5="5. Numbers 0-100 dev " + rnd + ": ";
-        var ResultString6="6. Chars 0-50: "+ (char)('a') + "; ";
+        var resultString5="5. Numbers 0-100 dev " + rnd + ": ";
+        var resultString6="6. Chars 0-50: "+ (char)('a') + "; ";
         for (int i=1;i<=200; i++){
             if (i<=50) {
-                ResultString6 = ResultString6 + (char)(i+'a') + "; ";//+ a - starts form a
+                resultString6 = resultString6 + (char)(i+'a') + "; ";//+ a - starts form a
             }
             if (i<=100) {
-                ResultString = ResultString + i + "; ";
-                Result = Result + i;
+                resultString = resultString + i + "; ";
+                result = result + i;
                 if (i % rnd ==0){
-                    ResultString5=ResultString5 + i + "; ";
+                    resultString5=resultString5 + i + "; ";
                 }
             }
             if (i>197){
-                Result2=Result2+i;
+                result2=result2+i;
             }
         }
-        System.out.println(ResultString);
-        System.out.println("3. Sum 0-100: " + Result);
-        System.out.println("4. Sum last 3 numbers 0-200: " + Result2);
-        System.out.println(ResultString5);
-        System.out.println(ResultString6);
-        ResultString="7. Simple numbers 100-0: ";
+        System.out.println(resultString);
+        System.out.println("3. Sum 0-100: " + result);
+        System.out.println("4. Sum last 3 numbers 0-200: " + result2);
+        System.out.println(resultString5);
+        System.out.println(resultString6);
+        resultString="7. Simple numbers 100-0: ";
         for (int i=100;i>=0; i=i-1){
-            ResultString = ResultString + i + "; ";
+            resultString = resultString + i + "; ";
         }
-        System.out.println(ResultString);
+        System.out.println(resultString);
     }
 }
