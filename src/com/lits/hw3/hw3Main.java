@@ -39,12 +39,14 @@ public class hw3Main {
         resultString="1. Symbol=\"" + symbol + "\"; Formula: a+11/12(b+b)/12=" + result;
         System.out.println(resultString);
         result=0;
-        //Вивести всі прості числа він 1 до 100
+        //Вивести всі прості числа від 1 до 100
         //Вивести суму всіх чисел від 0 до 100
         //Вивести суму останніх трьох чисел від 100 до 200
         resultString="2. Simple numbers 1-100: ";
         var result2 = 0;
-        rnd=r.nextInt(10);
+        do {
+            rnd=r.nextInt(10);
+        } while (rnd==0);
         var resultString5="5. Numbers 0-100 dev " + rnd + ": ";
         var resultString6="6. Chars 0-50: "+ (char)('a') + "; ";
         for (int i=1;i<=200; i++){
