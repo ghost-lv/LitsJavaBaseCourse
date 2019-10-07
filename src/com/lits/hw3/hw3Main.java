@@ -54,7 +54,16 @@ public class hw3Main {
                 resultString6 = resultString6 + (char)(i+'a') + "; ";//+ a - starts form a
             }
             if (i<=100) {
-                resultString = resultString + i + "; ";
+                    for (int i2 = 2; i2 <= i; i2++) {
+
+                        if (i % i2 == 0) {
+                            if (i != i2) {
+                                break;
+                            } else {
+                                resultString = resultString + i + "; ";
+                            }
+                        }
+                    }
                 result = result + i;
                 if (i % rnd ==0){
                     resultString5=resultString5 + i + "; ";
