@@ -8,22 +8,22 @@ public class HW4 {
         for (int i =0 ; i<array.length; i++){
             array[i]= new Random().nextInt(1000);
         }
-        Array Numbers = new Array(100);
-        Numbers.arr=array;
-        Numbers.print("1. Array");
-        Numbers.sort();
-        Numbers.print("2. Sorted array");
-        Numbers.printPairElements();
-        Numbers.printUnpairIndexes();
-        array=Numbers.getSorted();
+        Array numbers = new Array(100);
+        numbers.arr=array;
+        numbers.print("1. Array");
+        numbers.sort();
+        numbers.print("2. Sorted array");
+        numbers.printPairElements();
+        numbers.printUnpairIndexes();
+        array=numbers.getSorted();
         System.out.println("\n"+ "5. Sorted local array: ");
         for (int i : array){
             System.out.print(i + " ");
         }
-        Numbers.updatePair(5);
-        Numbers.print("6. Pair elements pdated with number 5");
-        Numbers.makeRandom(25);
-        Numbers.print("7. Random");
+        numbers.updatePair(5);
+        numbers.print("6. Pair elements pdated with number 5");
+        numbers.makeRandom(25);
+        numbers.print("7. Random");
 
 
     }
