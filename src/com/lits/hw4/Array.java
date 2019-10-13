@@ -2,7 +2,7 @@ package com.lits.hw4;
 
 import java.util.Random;
 
-public class Array {
+class Array {
     public int count;
     public int [] arr;
 
