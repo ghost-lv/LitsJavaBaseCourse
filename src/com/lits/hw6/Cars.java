@@ -1,6 +1,6 @@
 package com.lits.hw6;
 
-public enum Cars {
+enum Cars {
     MERSEDES (1, "DE", "MRS"),
     AUDI(2, "DE", "AU"),
     CITROEN (3,"FR","CTR"),
@@ -14,8 +14,14 @@ public enum Cars {
     int id;
     String country;
     String code;
+    public String getCode() { return code; }
+    public int getId() { return id;}
+    public String getCountry() { return country;}
 
     Cars(int id, String country, String code) {
+        this.id=id;
+        this.country=country;
+        this.code=code;
     }
 
     public static Cars findById(int id)  {
@@ -27,7 +33,21 @@ public enum Cars {
         return null;
         //throw new IllegalArgumentException();
     }
-
-    public int getId() { return id;}
+    public static Cars findByCode(String code)  {
+        for(Cars a : values()) {
+            if(a.getCode() == code) {
+                return a;
+            }
+        }
+        return null;
+    }
+    public static String findByCountry(String country)  {
+        String result = "";
+        for(Cars a : values()) {
+            if(a.getCountry() == country) {
+                result = result + " " + a ;
+            }
+        }
+        return result;}
 
 }
